@@ -1,0 +1,16 @@
+﻿@model Feature
+
+<div class="container">
+    <form asp-action="Delete" class="card" style="width: 18rem;">
+        <input asp-for="@Model.ImageUrl" hidden />
+        <input asp-for="@Model.Title" hidden />
+        <input asp-for="@Model.Description" hidden />
+        <img src="@Model.ImageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-text">@Model.Description</p>
+            <a asp-action="Index" class="btn btn-primary">Go somewhere</a>
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </div>
+    </form>
+</div>
